@@ -15,7 +15,8 @@ data class Author(
     @Column(name = "name", nullable = false)
     val name: String,
     @NotNull
-    @Column(name = "email", nullable = false)
+
+    @Column(name = "email", nullable = false, unique = true)
     val email: String,
     @Size(max=400)
     @Column(name = "desc", nullable = false)
