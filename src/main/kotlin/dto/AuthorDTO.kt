@@ -10,14 +10,14 @@ import javax.validation.constraints.Size
 @Introspected
 class AuthorDTO {
     @NotEmpty(message = "Name may not be empty")
-    lateinit var name: String
+     var name = ""
 
     @NotEmpty(message = "email may not be empty")
     @Email(message = "Email should be valid")
-    lateinit var email: String
+    var email= ""
 
     @Size(max=400,message = "desc should not have more than 400 chars")
-    lateinit var desc: String
+    var desc= ""
 }
 
 
