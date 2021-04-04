@@ -20,9 +20,8 @@ class AuthorController(
     private val authorRepository: AuthorRepository
 ) {
 
-
     @Post
-    fun addController(@Body @Valid data: AuthorDTO): HttpResponse<String> {
+    fun save(@Body @Valid data: AuthorDTO): HttpResponse<String> {
         return try {
             authorRepository.save(data)
             HttpResponse.ok("created")
